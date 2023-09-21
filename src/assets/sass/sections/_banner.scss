@@ -14,4 +14,51 @@
 .banner-slider-wrapper {
     max-width: 1050px;
 }
+.slick-dots {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    li {
+        margin: 0;
+        &.slick-active {
+            button {
+                background-color: #00007B;
+
+            }
+        }
+        button {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #E1E1E1;
+            padding: 0;
+            &::before {
+                display: none;
+            }
+            
+        }
+    }
+}
+.banner-section {
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        background-color: #fff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        cursor: pointer;
+        &.arrow-right {
+            left: auto;
+            right: 10px;
+        }
+    }
+}
 // Banner Section End

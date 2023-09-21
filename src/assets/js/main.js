@@ -74,7 +74,7 @@ $(".scrollToTop").on("click", function () {
     return false;
 });
 
-// Slider Part
+// Banner Slider Part
 $(".banner-slider-wrapper").slick({
     fade: false,
     slidesToShow: 1,
@@ -83,62 +83,41 @@ $(".banner-slider-wrapper").slick({
     autoplay: true,
     pauseOnHover: true,
     centerMode: false,
-    dots: false,
-    arrows: false,
-    nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
-    prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+    dots: true,
+    arrows: true,
+    nextArrow: '<i class="las la-arrow-right slick-arrow arrow-right"></i>',
+    prevArrow: '<i class="las la-arrow-left  slick-arrowarrow-left"></i> ',
 });
 
-// Odometer Counter
-let counter = $(".counter-item");
-if (counter) {
-    counter.each(function () {
-        $(this).isInViewport(function (status) {
-            if (status === "entered") {
-                for (
-                    var i = 0;
-                    i < document.querySelectorAll(".odometer").length;
-                    i++
-                ) {
-                    var el = document.querySelectorAll(".odometer")[i];
-                    el.innerHTML = el.getAttribute("data-odometer-final");
-                }
-            }
+if ($(".header-shop-item").length) {
+    var headershopToggleBtn = $(".header-shop-toggle-btn");
+    var headershopContent = $(".mini-shop-item");
+    var headershopCloseBtn = $(".mini-shop-close");
+    var body = $("body");
+
+    headershopToggleBtn.on("click", function (e) {
+        headershopContent.toggleClass("mini-shop-item-toggle");
+        e.stopPropagation();
+    });
+
+    headershopCloseBtn.on("click", function (e) {
+        headershopContent.removeClass("mini-shop-item-toggle");
+        e.stopPropagation();
+    });
+
+    body.on("click", function () {
+        headershopContent.removeClass("mini-shop-item-toggle");
+    })
+        .find(headershopContent)
+        .on("click", function (e) {
+            e.stopPropagation();
         });
-    });
 }
 
-//Faq Click Event
-$(".faq-item__title").on("click", function (e) {
-    var element = $(this).parent(".faq-item");
-    if (element.hasClass("open")) {
-        element.removeClass("open");
-        element.find(".faq-item__content").removeClass("open");
-        element.find(".faq-item__content").slideUp(300);
-    } else {
-        element.addClass("open");
-        element.children(".faq-item__content").slideDown(300);
-        element
-            .siblings(".faq-item")
-            .children(".faq-item__content")
-            .slideUp(300);
-        element.siblings(".faq-item").removeClass("open");
-        element.siblings(".faq-item").find(".faq-item__content").slideUp(300);
-    }
+$(".calculate-shipping-label").on("click", function () {
+    $(".calculate-shipping-form").slideToggle(1000);
 });
 
-var videoItem = $(".video-pop");
-if (videoItem) {
-    videoItem.magnificPopup({
-        type: "iframe",
-    });
-}
-
-// Active Path Active
-var path = location.pathname.split("/");
-var current = location.pathname.split("/")[path.length - 1];
-$(".menu li a").each(function () {
-    if ($(this).attr("href").indexOf(current) !== -1 && current != "") {
-        $(this).addClass("active");
-    }
+$(".country-list-label").on("click", function () {
+    $(".countries-wrapper").slideToggle(1000);
 });
