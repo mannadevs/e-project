@@ -1,0 +1,17 @@
+// Banner Section Start
+.banner-single-thumb {
+    max-width: 250px;
+    max-height: 200px;
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.banner-slider-wrapper {
+    max-width: 1050px;
+}
+// Banner Section End
