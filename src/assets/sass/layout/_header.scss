@@ -162,6 +162,9 @@
 	@media (max-width: 1199px) {
 		width: 180px;
 	}
+	@media (max-width: 991px) {
+		width: 100%;
+	}
 	border: 0;
 	background: transparent;
 	width: 100%;
@@ -200,16 +203,15 @@
 	  text-align: right;
 	}
   }
-  
-  @media (max-width: 575px) {
-	.thm-site-header .header-shop-item span {
-	  display: none;
-	}
-  }
+
   
   .thm-site-header .mini-shop-item {
 	background: #fff;
 	width: 244px;
+	@include breakpoint (max-lg) {
+		top: 100%;
+		width: 100%;
+	}
 	z-index: 11;
 	position: absolute;
 	left: -1px;
@@ -273,24 +275,10 @@
   
   @media (max-width: 991px) {
 	.thm-site-header .mini-shop-item.mini-shop-item-toggle {
-	  top: 70px;
-	  left: 50%;
-	  -webkit-transform: translateX(-50%);
-			  transform: translateX(-50%);
-	}
-  }
-  
-  @media (max-width: 575px) {
-	.thm-site-header .mini-shop-item.mini-shop-item-toggle {
-	  -webkit-transform: translateX(-50%);
-			  transform: translateX(-50%);
-	  left: 0;
-	}
-  }
-  
-  @media (max-width: 399px) {
-	.thm-site-header .mini-shop-item.mini-shop-item-toggle {
-	  left: -58%;
+	//   top: 70px;
+	//   left: 50%;
+	//   -webkit-transform: translateX(-50%);
+	// 		  transform: translateX(-50%);
 	}
   }
   
@@ -542,7 +530,6 @@
   }
   
   .header-right .recent-btn {
-
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 15px;
@@ -561,11 +548,6 @@
 	}
   }
   
-  @media (max-width: 991px) {
-	.header-right .recent-btn {
-	  display: none;
-	}
-  }
   
   .header-right .recent-btn .fi {
 	padding-right: 10px;
@@ -1341,3 +1323,70 @@
 	  padding: 20px 10px;
 	}
   }
+
+
+// mobile responsive css 
+@include breakpoint (max-lg) {
+	.main-header-area {
+		position: fixed;
+		left: 0;
+		top: 0;
+		max-width: 320px;
+		padding: 50px 30px;
+		height: 100dvh;
+		background-color: #fff;
+		z-index: 9999;
+		.header-menu {
+			width: 100%;
+			// max-width: 100%;
+		}
+		.header-menu li {
+			width: 100%;
+		}
+		.search-form {
+			// padding-right: 50px;
+
+		}
+		.logo {
+			margin-bottom: 30px;
+		}
+		.search-form .form--control {
+			width: 100%;
+			padding-right: 40px;
+		}
+		.header-menu {
+			flex-direction: column;
+			justify-content: start;
+			align-items: flex-start !important;
+			
+		}
+		.btn-close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+	
+	}
+	.menu {
+		left: 0%;
+		&.active {
+			left: 0%;
+		}
+	}
+	.thm-site-header .navigation  {
+		background-color: transparent;
+	}
+	.thm-site-header {
+		background-color: transparent;
+	}
+	.mobile-px-none {
+		padding-inline: 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.dropdown-wrapper .nice-select {
+		max-width: 111px;
+	}
+
+}
