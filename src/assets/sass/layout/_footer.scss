@@ -1,0 +1,48 @@
+.footer-top {
+    background-color: #00007B;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    * {
+        color: #fff;
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+.footer-widget {
+    .title {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+.widget-links {
+    li {
+        padding: 2.2px 0;
+        a, span {
+            font-size: 12px;
+        }
+        span {
+            padding-left: 3px;
+            font-weight: 600;
+        }
+        i {
+            font-size: 17px;
+        }
+    }
+}
+.payment-card-wrappper  {
+    gap: 20px 30px;
+    @media (max-width: 1500px) {
+        gap: 20px;
+    }
+}
+.single-payment-card {
+    @media (max-width: 1500px) {
+        img {
+            max-width: 90px;
+        }
+    }
+    
+}

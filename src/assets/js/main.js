@@ -121,3 +121,6 @@ $(".calculate-shipping-label").on("click", function () {
 $(".country-list-label").on("click", function () {
     $(".countries-wrapper").slideToggle(1000);
 });
+
+// Nice Select
+$("select").niceSelect();
