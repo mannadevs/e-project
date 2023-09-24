@@ -2,7 +2,7 @@
 <div class="header">
     <div class="dropdown-info-top py-2">
         <div class="container">
-            <div class="dropdown-wrapper d-flex flex-wrap gap-2 justify-content-end">
+            <div class="dropdown-wrapper d-flex flex-wrap gap-2 justify-content-sm-end">
                 <div class="">
                     <select class="nice-select text-center">
                         <option value="">USD</option>
@@ -44,14 +44,12 @@
                     </a>
                 </div>
                 <ul class="header-menu d-flex flex-wrap align-items-center gap-2 gap-xxl-4">
-                    <li>
+                    <li class="mb-4 mb-lg-0">
                         <form action="" class="search-form">
                             <div class="form-group position-relative">
-                                <input type="text" placeholder="Please enter item to find"
-                                    class="form-control form--control">
+                                <input type="text" placeholder="Please enter item to find" class="form-control form--control">
                                 <button type="submit" class="search-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                        stroke="#00007B">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#00007B">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
                                         </g>
@@ -71,17 +69,28 @@
                     <li><a href=""><i class="fas fa-cart-arrow-down"></i> CART</a></li>
                 </ul>
             </div>
-            <button class="btn-close d-lg-none header-trigger"></button>
+            <button class="btn-close d-lg-none header-close shadow-none"></button>
         </div>
     </div>
+
+    <!-- Mobile Header -->
+    <div class="bg-white py-2 d-lg-none">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="" class="logo"><img src="assets/images/logo.svg" alt="logo"></a>
+                <button class="p-0 border-0 outline-0 bg-white fs--20px header-toggler"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Header -->
+
     <div class="thm-site-header">
-        <nav class="navigation navbar navbar-expand-lg navbar-light original">
-            <div class="container">
+        <nav class="navigation navbar navbar-expand-lg navbar-light original pt-2 pt-lg-0">
+            <div class="container d-block">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-2 mobile-px-none">
                         <div class="header-shop-item">
-                            <button class="header-shop-toggle-btn"><span> <i class="fas fa-bars"
-                                        style="color: #ffffff;"></i>CATEGORIES</span> </button>
+                            <button class="header-shop-toggle-btn"><span> <i class="fas fa-bars" style="color: #ffffff;"></i>CATEGORIES</span> </button>
                             <div class="mini-shop-item">
                                 <ul id="metis-menu">
                                     <li>
@@ -157,121 +166,6 @@
                         </div><!-- end of nav-collapse -->
                     </div>
                     <div class="col-lg-2 d-none d-lg-block">
-                        <div class="header-right">
-                            <a href="recent-view.html" class="recent-btn"><i class="fi flaticon-refresh"></i>
-                                <span>Recently
-                                    Viewed</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- end of container -->
-        </nav>
-        <nav class="navigation navbar navbar-expand-lg navbar-light sticky-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-3 d-lg-none dl-block">
-                        <div class="mobail-menu">
-                            <button type="button" class="navbar-toggler open-btn">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar first-angle"></span>
-                                <span class="icon-bar middle-angle"></span>
-                                <span class="icon-bar last-angle"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-6 col-sm-5 col-6 d-block d-lg-none">
-                        <div class="navbar-header">
-                            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-3">
-                        <div class="header-shop-item">
-                            <button class="header-shop-toggle-btn"><span>Shop By Category</span> </button>
-                            <div class="mini-shop-item mini-shop-item-toggle">
-                                <ul id="metis-menu">
-                                    <li>
-                                        <a href="product.html">Feature Product</a>
-                                    </li>
-                                    <li class="header-catagory-item">
-                                        <a class="menu-down-arrow" href="#">Perfunsee &amp; Cologne</a>
-                                        <ul class="header-catagory-single collapse">
-                                            <li><a href="#">Men's Clothing</a></li>
-                                            <li><a href="#">Computer &amp; Office</a></li>
-                                            <li><a href="#">Jewelry &amp; Watches</a></li>
-                                            <li><a href="#">Phones &amp; Accessories</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="product.html">Best Sellers</a>
-                                    </li>
-                                    <li class="header-catagory-item">
-                                        <a class="menu-down-arrow" href="#">Men Fashion</a>
-                                        <ul class="header-catagory-single collapse">
-                                            <li><a href="#">Men's Clothing</a></li>
-                                            <li><a href="#">Computer &amp; Office</a></li>
-                                            <li><a href="#">Jewelry &amp; Watches</a></li>
-                                            <li><a href="#">Phones &amp; Accessories</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="product.html">Bags &amp; Shoes</a>
-                                    </li>
-                                    <li class="header-catagory-item">
-                                        <a class="menu-down-arrow" href="#">Women Fashion</a>
-                                        <ul class="header-catagory-single collapse">
-                                            <li><a href="#">Men's Clothing</a></li>
-                                            <li><a href="#">Computer &amp; Office</a></li>
-                                            <li><a href="#">Jewelry &amp; Watches</a></li>
-                                            <li><a href="#">Phones &amp; Accessories</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="header-catagory-item">
-                                        <a class="menu-down-arrow" href="#">Toys &amp; kids Baby</a>
-                                        <ul class="header-catagory-single collapse">
-                                            <li><a href="#">Men's Clothing</a></li>
-                                            <li><a href="#">Computer &amp; Office</a></li>
-                                            <li><a href="#">Jewelry &amp; Watches</a></li>
-                                            <li><a href="#">Phones &amp; Accessories</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="product.html">Men's Clothing</a>
-                                    </li>
-                                    <li>
-                                        <a href="product.html">On Sale</a>
-                                    </li>
-                                    <li>
-                                        <a href="product.html">All Accessories</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-1 col-1">
-                        <div id="navbar" class="collapse navbar-collapse navigation-holder">
-                            <button class="menu-close"><i class="ti-close"></i></button>
-                            <ul class="nav navbar-nav mb-2 mb-lg-0">
-                                <li class="menu-item-has-children">
-                                    <a class="active menu-down-arrow" href="#">Home</a>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="menu-item-has-children">
-                                    <a class="menu-down-arrow" href="#">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="product-single.html">Shop Single</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="deals.html">Deals</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-
-                        </div><!-- end of nav-collapse -->
-                    </div>
-                    <div class="col-lg-2 col-md-1 col-1">
                         <div class="header-right">
                             <a href="recent-view.html" class="recent-btn"><i class="fi flaticon-refresh"></i>
                                 <span>Recently
