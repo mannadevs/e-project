@@ -10,11 +10,11 @@
 		.list {
 			max-height: 400px;
 			overflow-y: auto;
-			scrollbar-width: 3px;
+			// scrollbar-width: 3px;
 			li {
 				transition: all ease 0.3s;
 				&:hover {
-					background-color: #ed660d;
+					background-color: #C8AF77;
 					color: #fff;
 				}
 			}
@@ -22,13 +22,14 @@
 	}
 }
 .main-header-area {
-	padding: 10px 0 25px;
+	padding: 0px 0 20px;
 }
 .logo {
 	img {
 		max-width: 260px;
-		@include breakpoint(max-xxl) {
-			max-width: 200px;
+		max-height: 100px;
+		@include breakpoint (max-sm) {
+			height: 80px;
 		}
 	}
 }
@@ -37,7 +38,7 @@
 		a {
 			font-size: 14px;
 			font-weight: 500;
-			color: #00007b;
+			color: #0D2255 ;
 			padding: 5px 30px;
 			@include breakpoint(max-xxl) {
 				padding-inline: 18px;
@@ -79,7 +80,7 @@
 	border: none;
 	outline: none;
 	background-color: transparent;
-	color: #00007b;
+	color: #0D2255 ;
 	svg {
 		width: 20px;
 		height: 20px;
@@ -101,11 +102,11 @@
 	/* style for navigation less than 992px */
 	/*navbar collaps less then 992px*/
 	/*** cart-search-contact ***/
-	background-color: #00007b;
+	background-color: #0D2255 ;
 }
 
 .thm-site-header .navigation {
-	background-color: #00007b;
+	background-color: #0D2255 ;
 	margin-bottom: 0;
 	padding: 0;
 	border: 0;
@@ -177,7 +178,7 @@
 	padding-bottom: 16px;
 	// border-right: 1px solid #F1E2CC;
 	position: relative;
-	background-color: red;
+	background-color: #C8AF77;
 	text-transform: uppercase;
 	i {
 		padding-right: 10px;
@@ -1078,7 +1079,7 @@
 }
 
 .thm-site-header .navigation {
-	background-color: #00007b;
+	background-color: #0D2255 ;
 	margin-bottom: 0;
 	border-radius: 0;
 }
@@ -1115,7 +1116,7 @@
 		text-transform: uppercase;
 		&:hover,
 		&.active {
-			background-color: #3838db;
+			background-color: #000000;
 			color: #fff;
 		}
 	}
