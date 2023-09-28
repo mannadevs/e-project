@@ -2839,6 +2839,7 @@ input:-webkit-autofill:focus {
         z-index: 9999;
         transform: translateX(-100%);
         transition: 0.3s;
+        overflow-y: auto;
     }
 
     .main-header-area.active {
