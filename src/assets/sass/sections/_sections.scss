@@ -105,6 +105,135 @@
     }
 }
 
+// Learing Section Start
+@keyframes imageAnimation {
+    0% {
+      transform: translateY(-20%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+@keyframes imageAnimationTwo {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(-15%);
+    }
+  }
+
+.learing-section {
+    padding: 200px 0;
+    background-color: #353539;
+    overflow: hidden;
+    position: relative;
+    @include breakpoint (max-xxl) {
+        padding: 150px 0;
+    }
+    @include breakpoint (max-lg) {
+        padding: 120px 0;
+    }
+}
+.learing-content {
+    max-width: 445px;
+    @include breakpoint (max-xl) {
+        max-width: 300px;
+    }
+    @include breakpoint (max-lg) {
+        max-width: 100%;
+        text-align: center;
+    }
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        @include breakpoint (max-xl) {
+            margin-bottom: 10px;
+        }
+    }
+    &__title {
+        font-size: 48px;
+        margin-bottom: 30px;
+        @include breakpoint (max-xl) {
+            font-size: 42px;
+        }
+        @include breakpoint (max-sm) {
+            font-size: 36px;
+        }
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+    * {
+        color: #fff;
+    }
+    .cmn--btn {
+        border-color: #fff;
+        border-radius: 50px;
+        padding-inline: 25px;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+        }
+    }
+}
+.learing-thumb-area {
+    transform: rotate(12deg);
+    position: relative;
+    @include breakpoint (max-lg) {
+        transform: rotate(0deg);
+    }
+}
+.learing-thumb-wrapper {
+    position: absolute;
+    top: 0;
+    animation: imageAnimationTwo 12s linear infinite;
+    &.style-two {
+        left: 28.8%;
+        animation: imageAnimation 12s linear infinite;
+        @media (max-width: 1500px) {
+            left: 31.5%;
+        }
+        @include breakpoint (max-xl) {
+            left: 34.9%;
+        }
+    }
+    &.style-three {
+        left: 57.6%;
+        @media (max-width: 1500px) {
+            left: 63%;
+        }
+        @include breakpoint (max-xl) {
+            left: 69.8%;
+        }
+    }
+    .single-thumb {
+        width: 258px;
+        @media (max-width: 1500px) {
+            width: 250px;
+        }
+        @media (max-width: 1400px) {
+            width: 243px;
+            height: 280px;
+        }
+        @include breakpoint (max-xxl) {
+            width: 230px;
+            height: 250px;
+        }
+        @include breakpoint (max-xl) {
+            width: 180px;
+            height: 220px;
+        }
+        height: 310px;
+        margin-bottom: 8px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
 
 // Overview Info Section Start
 .overview-info-section {
